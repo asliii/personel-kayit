@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personel İşlemleri</title>
+        <link rel="shortcut icon" href="{%  static 'images/favicon.jpg' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="{% static 'kayitislemleri_css.css' %}"/>
+<script src="https://use.fontawesome.com/b35b6a67c1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="{% static 'jquery.mask.min.js' %}"></script>
+    <script src="{% static 'kayitislemleri_js.js' %}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="mb70">
+ <div class="page-header">
+     <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <img title="N2Mobil Takip Sistemleri A.Ş." src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCM8n1JW0SakA9rFkenvGMYqcoKfRgtRUW0kwo0tkRDKcKzgF2uw" class="img-responsive logo">
+      </a>
+    </div>
+      <h2 class="text-center">Personel Kayıt Sistemi</h2>
+  </div>
+</nav>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+<footer>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © 2018. Aslıhan Nurcan Çetin. </p>
+            <div class="pull-right">
+                <ul class="nav nav-pills payments">
+                    <li><i class="fa fa-cc-visa"></i></li>
+                    <li><i class="fa fa-cc-mastercard"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>
+                    <li><i class="fa fa-cc-paypal"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personel Detayları</title>
+</head>
+<body>
+{% extends 'kayitislemleri/base.html' %}
+
+{% block content %}
+<div class="col-md-4"></div>
+<div class="col-md-6">
+ <div class="card hovercard">
+
+                    {% if personel.gender == 'Woman' %}
+     <div class="avatar mb20 ml40">
+                    <img title="{{personel.fullName}}" src="http://icons.veryicon.com/png/Business/Business%20V2/woman.png" class="img-thumbnail img-responsive">
+                      </div>
+     {% else %}
+     <div class="avatar mb20 ml73">
+                    <img title="{{personel.fullName}}" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzNiw-j2vGUjlCV58rIiu-tQsIj7X7LbOpDNyuwT8ZHXJ__daB" class="img-thumbnail img-responsive">
+     </div>
+         {% endif %}
+
+                <div class="info text-center">
+                    <div class="title"><strong>
+                      {{personel.fullName}}</strong>
+                    </div>
+                    <div class="desc mb5"><i class="fa fa-book"></i> {{personel.position}}</div>
+                    <div class="desc mb5"><i class="fa fa-envelope"></i> {{personel.email}}</div>
+                    <div class="desc mb5"><i class="fa fa-phone"></i> {{personel.phone}}</div>
+                </div>
+                <div class="bottom text-center mb5">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="{{personel.twitter}}">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm facebook-icon" rel="publisher"
+                       href="{{personel.facebook}}">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </div>
+                <div class="mb20 ml40">
+                    <a class="delete-icon" href="/" style="text-decoration:none"><i class="fa fa-x fa-hand-o-left"></i><strong>Listeye Dön</strong></a>
+                </div>
+            </div>
+    </div>
+{% endblock %}
+
+</body>
+</html>
+
+
