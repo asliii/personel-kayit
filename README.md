@@ -19,8 +19,8 @@
 </ul>
 
 <p align="center">
-  <img src = "https://github.com/ahmettersoz/biyardimApp/blob/master/biyardim_diagram.png"></img>
+  <img src = "https://github.com/asliii/personel-kayit/blob/master/pic_1.jpg"></img>
 </p>
 <p align="center">
-  <img src = "https://github.com/ahmettersoz/biyardimApp/blob/master/biyardim_diagram.png"></img>
+  <img src = "https://github.com/asliii/personel-kayit/blob/master/pic_2.jpg"></img>
 </p>
