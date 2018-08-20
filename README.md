@@ -18,3 +18,9 @@
 
 </ul>
 
+<p align="center">
+  <img src = "https://github.com/ahmettersoz/biyardimApp/blob/master/biyardim_diagram.png"></img>
+</p>
+<p align="center">
+  <img src = "https://github.com/ahmettersoz/biyardimApp/blob/master/biyardim_diagram.png"></img>
+</p>
