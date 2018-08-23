@@ -30,7 +30,7 @@
       <td>{{personel.phone}}</td>
      <td>{{personel.position}}</td>
      <td>{{personel.gender}}</td>
-     <td>         <a href="{% url 'personel_edit' pk=personel.pk %}" title="Düzenle"><span class="glyphicon glyphicon-pencil edit-icon"></span></a>       <a href="{% url 'delete_personel' pk=personel.pk %}" title="Sil"><span class="glyphicon glyphicon-trash delete-icon"></span></a>       <a href="{% url 'personel_detail' pk=personel.pk %}" title="İncele"><span class="glyphicon glyphicon-search"></span></a></td>
+     <td>         <a href="{% url 'personel_edit' pk=personel.pk %}" title="Düzenle"><span class="glyphicon glyphicon-pencil edit-icon"></span></a>        <a class="delete_button" id="{{ personel.id }}"><span class="glyphicon glyphicon-trash delete-icon"></span></a>       <a href="{% url 'personel_detail' pk=personel.pk %}" title="İncele"><span class="glyphicon glyphicon-search"></span></a></td>
     </tr>
 {% endfor %}
   </tbody>
