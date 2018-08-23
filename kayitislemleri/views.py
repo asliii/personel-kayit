@@ -32,14 +32,12 @@ def delete_personel(request,pk):
     return  render(request,template,{'personeller':Personel.objects.all()})
 
 def personel_edit(request,pk):
-    if request.method == "POST":
-        form = PostForm(request.POST)
-        if form.is_valid():
-            personel = form.save(commit=False)
-            personel.pk=pk
-            personel.created_date = timezone.now()
-            personel.save()
-            return redirect('personel_detail', pk=personel.pk)
-    else:
-        form = PostForm()
+    form = PostForm(request.POST)
+    if form.is_valid():
+        personel = form.save(commit=False)
+        personel.pk=pk
+        personel.save()
+        return redirect('personel_detail', pk=personel.pk)
+    personel = get_object_or_404(Personel, pk=pk)
+    form = PostForm(request.POST or None, instance=personel)
     return render(request, 'kayitislemleri/personel_edit.html', {'form': form})
