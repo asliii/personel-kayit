@@ -1,5 +1,6 @@
 .delete-icon{
-    color:red
+    color:red;
+    cursor:pointer;
 }
 .edit-icon{
     color:yellow
