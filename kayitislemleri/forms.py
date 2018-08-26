@@ -1,13 +1,6 @@
 from django import forms
 from .models import Personel
 
-Position_Chocies= [
-    ('GeneralMenegar', 'Genel Müdür'),
-    ('SeniorDeveloper', 'Yazılım Geliştirme Uzmanı'),
-    ('JuniorDeveloper', 'Genç Yazılımcı'),
-    ('Secretary', 'Sekreter'),
-    ('Accountant','Muhasebeci')
-    ]
 Gender_Chocies= [
     ('Woman', 'Kadın'),
     ('Man', 'Erkek'),
@@ -44,9 +37,7 @@ class PostForm(forms.ModelForm):
             'placeholder': '(xxx)-xx-xxxx'
         }
     ))
-    position = forms.CharField(label='Pozisyon ', widget=forms.Select(choices=Position_Chocies,attrs={
-        'class':'form-control'
-    }))
+    
     gender = forms.CharField(label='Cinsiyet ', widget=forms.Select(choices=Gender_Chocies, attrs={
         'class': 'form-control'
     }))
