@@ -41,3 +41,18 @@ def personel_edit(request,pk):
     personel = get_object_or_404(Personel, pk=pk)
     form = PostForm(request.POST or None, instance=personel)
     return render(request, 'kayitislemleri/personel_edit.html', {'form': form})
+
+def personel_filter(request, pk):
+    position = get_object_or_404(Position, pk=pk)
+    ppk = position.name
+    personeller=[]
+    for pers in Personel.objects.all():
+        if pers.position==ppk:
+            personeller.append(pers)
+    #personeller = Personel.objects.filter(position__name = ppk)
+    context = {
+        'personeller': personeller,
+        'positions': Position.objects.all()
+    }
+
+    return render(request, 'kayitislemleri/personel_kayit.html', context)
