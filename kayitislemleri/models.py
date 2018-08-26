@@ -10,9 +10,18 @@ class Personel(models.Model):
     gender = models.CharField(max_length=5)
     created_date = models.DateTimeField(
         default=timezone.now)
-    position = models.CharField(max_length=50)
+    position = models.ForeignKey(to='Position', on_delete=models.CASCADE)
     def publish(self):
         self.save()
 
     def __str__(self):
         return self.fullName
+
+class Position(models.Model):
+    name = models.CharField(max_length=50)
+
+    def publish(self):
+        self.save()
+
+    def __str__(self):
+        return self.name
