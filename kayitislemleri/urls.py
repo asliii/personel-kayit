@@ -7,4 +7,6 @@ urlpatterns = [
     url(r'^personel/new/$', views.personel_new, name='personel_new'),
     url(r'^personel/delete/(?P<pk>\d+)/$',views.delete_personel,name='delete_personel'),
     url(r'^personel/edit/(?P<pk>\d+)/$', views.personel_edit, name='personel_edit'),
+    url(r'^personel/filter/(?P<pk>\d+)/$', views.personel_filter, name='personel_filter'),
+
 ]
