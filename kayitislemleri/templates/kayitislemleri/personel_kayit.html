@@ -9,7 +9,13 @@
 
 {% block content %}
 <button class="btn btn-default" title="Yeni Ekle"><a href="{% url 'personel_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></button>
-<table class="table table-dark">
+<select class="form-control" id="positionSelecte" >
+     <option>Pozisyon seçin..</option>
+    {% for position in positions %}
+        <option value="{{position.pk}}">{{position.name}}</option>
+    {% endfor %}
+             </select>
+    <table class="table table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
